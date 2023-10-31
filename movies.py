@@ -16,8 +16,18 @@ class Movies:
                             'cast': movie_cast
                         }
                     )
+                    movie_name = None
+                    movie_cast = None
                 row_idx += 1
 
+        if movie_name and movie_cast:
+            # Add the last movie to the list
+            self._movies.append(
+                {
+                    'name': movie_name,
+                    'cast': movie_cast
+                }
+            )
 
 if __name__ == "__main__":
     movies = Movies('./movies.txt')
